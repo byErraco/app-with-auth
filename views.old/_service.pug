@@ -1,0 +1,66 @@
+section#about.section-padding.about-us-sec.p-relative.margin-fix
+  .container
+    .row
+      .col-lg-6.align-self-center
+        .about-left-side.mb-md-40
+          //- h3.text-custom-black.fw-700 Abogados en linea para brindarte el mejor servicio
+          h3.text-custom-black.fw-700=service.name
+            p.text-light-white.fs-14.mb-xl-20= service.summary
+              |
+          p.text-light-white.fs-14.mb-xl-20= service.summary
+            | 
+              
+          //- p.text-light-white.fs-14.mb-xl-20
+          //-   | El grupo de Mi tr&aacute;mite, logra optimizar el tiempo con una mejor oferta de servicios para sus tr&aacute;mites.
+          .about-list
+            ul
+              li.text-light-white.fs-14
+                i.fas.fa-check
+                |  Experto Legal
+              li.text-light-white.fs-14
+                i.fas.fa-check
+                |  Tasa de &eacute;xito del 100%
+              li.text-light-white.fs-14
+                i.fas.fa-check
+                |  No necesita costo adicional
+              li.text-light-white.fs-14
+                i.fas.fa-check
+                | Muy recomendable
+          button.btn-first.btn-submit#book-service(data-service-id=`${service.id}`)
+            | Haz tu Cita
+          h3.text-custom-black.fw-700 Contactame
+          form.form-style-2.mt-4.form-service-data
+            .row
+              .col-md-12
+                .form-group
+                  .input-group
+                    span.input-group-preappend
+                      i.fas.fa-quote-left
+                    input#nameService.form-control(type='text' name='name' placeholder='Asunto' )
+              .col-md-12
+                .form-group
+                  .input-group
+                    span.input-group-preappend
+                      i.fas.fa-comment
+                    textarea#summary.form-control.form-control-custom(type='text' name='name' placeholder='Descripcion' style='height: 100px;')
+              .col-md-12
+                input#publishedBy(type='hidden' name='publishedBy' value=`${user.id}`)
+
+                button.btn-first.btn-submit-fill.full-width(type='submit') Contactar
+          .signature-sec.mb-4
+            .signature-right
+              img.img-fluid.image-fit(src='/assets/images/logo.png' alt='Logo')
+      .col-lg-6
+        .about-right-side-img.p-relative
+          .first-img.p-relative
+            img.img-fluid.full-width(src=`/assets/images/users/${service.imageCover}` alt='about us')
+            //- .transform-center
+            //-   .text
+            //-     .side-text
+            //-       p
+            //-         strong
+            //-           | Experiencia, responsabilidad
+            //-           br
+            //-           |  y profesionalismo.
+
+  .bg-light-white-skew-2.bg-custom-black

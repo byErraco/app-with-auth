@@ -1,0 +1,103 @@
+section.section-padding.law-advertisement.parallax(style='padding: 120px 0;')
+  .row
+    .col-12
+      .advertisement-text
+        p.text-white.fs-20
+        h3.text-white
+          | Estamos contigo hasta que ganes.
+        .btn-group
+          a.btn-first.btn-submit-fill.fw-600(href='#') Iniciar Ahora
+section#services.main-services.section-padding
+  .container
+    .section-header
+      .section-heading
+        h3.text-custom-black.fw-700 Servicios
+        .section-description
+      .section-btn
+    .row
+      each service in services
+        .col-lg-3.col-sm-6
+          .main-services-box.p-relative.mb-xl-30
+            .main-service-wrapper.padding-20
+              .img-sec.mb-md-40
+                        img.full-width.mb-2(src=`/assets/images/users/${service.imageCover}` alt='img')
+              //- .icon-box
+              //-   i.flaticon-family
+              h5.fw-700
+                a.text-custom-black(href=`/service/${service.slug}`)= service.name 
+              .mb-1.text-muted= service.category
+                .mb-1.text-muted= service.createdAt.toLocaleString("nl",{year:"2-digit",month:"2-digit", day:"2-digit"})
+              
+                
+              p.text-light-white.no-margin= service.summary
+                ul.nav.custom.mb-xl-20
+                  li.nav-item
+                    a.nav-link.active.btn-first.btn-submit-fill(href=`/service/${service.slug}`) Ver Servicio
+                  li.nav-item
+                    a.nav-link.active.btn-first.btn-submit-fill( href=`/service/${service.slug}`)
+                      i.fas.fa-dollar-sign.fw-700= service.price 
+
+
+
+
+
+
+
+
+
+      //- .col-lg-3.col-sm-6
+      //-   .main-services-box.p-relative.mb-xl-30
+      //-     .main-service-wrapper.padding-20
+      //-       .icon-box
+      //-         i.flaticon-kidnapping
+      //-       h5.fw-700
+      //-         a.text-custom-black(href='#') Derecho Penal
+      //-       p.text-light-white.no-margin Lorem ipsum dolor sit amet consecte adipiscing elit sed do eiusincidunt.
+      //- .col-lg-3.col-sm-6
+      //-   .main-services-box.p-relative.mb-xl-30
+      //-     .main-service-wrapper.padding-20
+      //-       .icon-box
+      //-         i.flaticon-hook
+      //-       h5.fw-700
+      //-         a.text-custom-black(href='#') Derecho Inmobuliario
+      //-       p.text-light-white.no-margin Lorem ipsum dolor sit amet consecte adipiscing elit sed do eiusincidunt.
+      //- .col-lg-3.col-sm-6
+      //-   .main-services-box.p-relative.mb-xl-30
+      //-     .main-service-wrapper.padding-20
+      //-       .icon-box
+      //-         i.flaticon-book
+      //-       h5.fw-700
+      //-         a.text-custom-black(href='#') Derecho Educativo
+      //-       p.text-light-white.no-margin Lorem ipsum dolor sit amet consecte adipiscing elit sed do eiusincidunt.
+      //- .col-lg-3.col-sm-6
+      //-   .main-services-box.p-relative.mb-md-30
+      //-     .main-service-wrapper.padding-20
+      //-       .icon-box
+      //-         i.flaticon-wounded
+      //-       h5.fw-700
+      //-         a.text-custom-black(href='#') Lesiones Personales
+      //-       p.text-light-white.no-margin Lorem ipsum dolor sit amet consecte adipiscing elit sed do eiusincidunt.
+      //- .col-lg-3.col-sm-6
+      //-   .main-services-box.p-relative.mb-md-30
+      //-     .main-service-wrapper.padding-20
+      //-       .icon-box
+      //-         i.flaticon-auction
+      //-       h5.fw-700
+      //-         a.text-custom-black(href='#') Derecho Laboral
+      //-       p.text-light-white.no-margin Lorem ipsum dolor sit amet consecte adipiscing elit sed do eiusincidunt.
+      //- .col-lg-3.col-sm-6
+      //-   .main-services-box.p-relative.mb-xs-30
+      //-     .main-service-wrapper.padding-20
+      //-       .icon-box
+      //-         i.flaticon-law
+      //-       h5.fw-700
+      //-         a.text-custom-black(href='#') Derecho Corporativo
+      //-       p.text-light-white.no-margin Lorem ipsum dolor sit amet consecte adipiscing elit sed do eiusincidunt.
+      //- .col-lg-3.col-sm-6
+      //-   .main-services-box.p-relative
+      //-     .main-service-wrapper.padding-20
+      //-       .icon-box
+      //-         i.flaticon-balance-scale
+      //-       h5.fw-700
+      //-         a.text-custom-black(href='#') Derecho Civil
+      //-       p.text-light-white.no-margin Lorem ipsum dolor sit amet consecte adipiscing elit sed do eiusincidunt.

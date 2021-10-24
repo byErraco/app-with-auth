@@ -1,0 +1,17 @@
+extends baseEmail
+
+block content
+  p Hola #{firstName},
+  p Bienvenido a Mi Trámite, estamos encantados de tenerte 🎉🙏
+  p Aquí todos somos una gran familia, así que asegúrate de subir tu foto de usuario para que podamos conocerte un poco mejor.!
+  table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    tbody
+      tr
+        td(align='left')
+          table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+            tbody
+              tr
+                td
+                  a(href=`${url}`, target='_blank') Upload user photo
+  p Si necesita ayuda para resolver alguna duda, no dude en ponerse en contacto con nosotros!
+  p - Equipo de Mi Trámite.

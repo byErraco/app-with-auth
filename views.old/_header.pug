@@ -1,0 +1,73 @@
+
+header.header-style-1
+  .topbar-style-1
+    .container
+      .row.justify-content-center
+        .col-lg-6.col-md-6.col-12
+          .left-side
+            .language-box
+        .col-lg-6.col-md-6.col-12
+          .right-side
+            ul.custom
+              li
+                a.text-custom-white.fs-14(href='#')
+                  i.fab.fa-facebook-f
+              li
+                a.text-custom-white.fs-14(href='#')
+                  i.fab.fa-twitter
+              li
+                a.text-custom-white.fs-14(href='#')
+                  i.fab.fa-linkedin
+              li
+                a.text-custom-white.fs-14(href='#')
+                  i.fab.fa-youtube
+              li.search
+                a.text-custom-white.fs-14(href='javascript:void(0)')
+                  i.fas.fa-search
+              li.topbar-search
+                form(method='get')
+                  input.form-control.form-control-custom(type='search' name='search' placeholder='Search...' value='')
+  .main-navigation-style-1
+    .container
+      .row
+        .col-12
+          .navigation
+            .logo
+              a(href='/')
+                img.img-fluid.image-fit(src='/assets/images/logo.png' alt='Logo')
+            .main-menu
+              .mobile-logo
+                a(href='/')
+                  img.img-fluid.image-fit(src='/assets/images/logo.png' alt='Logo')
+              nav
+                ul.custom
+                  li.menu-item
+                    a.smooth-scroll(href='/') Inicio
+                  li.menu-item
+                    a.smooth-scroll(href='/about') Quienes somos
+                  li.menu-item
+                    a.smooth-scroll(href='/services') Servicios
+                  li.menu-item
+                    a.smooth-scroll(href='#blog') Blog
+                  li.menu-item
+                    a.smooth-scroll(href='/contact') Contactos
+                  if user  
+                    li.menu-item
+                      a.smooth-scroll.logout(href='/') Cerrar Sesion 
+                    li.menu-item
+                      a.smooth-scroll(href='/me')=user.name.split(' ')[0] 
+                  else 
+                    li.menu-item
+                      a.smooth-scroll(href='/register') Registrate 
+                    li.menu-item
+                      a.smooth-scroll(href='/login') Iniciar sesion 
+              .right-side
+                .cta-btn
+                  a.btn-first.btn-submit(href='/my-services')
+                    | Mis Servicios
+                  
+            .hamburger-menu
+              .menu-btn
+                span
+                span
+                span
